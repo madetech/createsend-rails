@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CreatesendRails do
+describe 'Blah' do
   it 'has a version number' do
     expect(CreatesendRails::VERSION).not_to be nil
   end

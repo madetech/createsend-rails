@@ -1,4 +1,8 @@
-source 'https://rubygems.org'
+source "http://rubygems.org"
 
-# Specify your gem's dependencies in createsend-rails.gemspec
 gemspec
+
+group :test do
+  gem 'rspec', '~> 2.14.0'
+  gem 'mime-types', '~> 1.25.1'
+end
