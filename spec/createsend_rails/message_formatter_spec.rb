@@ -10,15 +10,19 @@ describe CreateSendRails::MessageFormatter do
     expect(subject).to eq(expected_recipients)
   end
 
-  it 'expects to include the JSON body as keys' do
-    let(:message) { double(to: 'user@example.com',
-                           body: {'reset_url' => 'http:://localhost/en/reset'}.to_json) }
-    subject.should include(:reset_url)
+  context 'when the message includes JSON body' do
+    let(:message) do
+      double(to: 'user@example.com', body: {'reset_url' => 'http:://localhost/en/reset'}.to_json)
+    end
+
+    it { is_expected.to include(:reset_url) }
   end
 
-  it 'expects to remove empty key values' do
-    let(:message) { double(to: 'user@example.com') }
-    subject.should_not include(:CC)
-  end
+  context 'expects to remove empty key values' do
+    let(:message) do
+      double(to: 'user@example.com')
+    end
 
+    it { is_expected.to_not include(:CC) }
+  end
 end
