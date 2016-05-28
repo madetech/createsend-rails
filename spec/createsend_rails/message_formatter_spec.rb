@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe CreateSendRails::MessageFormatter do
   subject { described_class.new(message).format }
   let(:message) { double(to: 'user@example.com',
