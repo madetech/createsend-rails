@@ -6,22 +6,23 @@ Gem::Specification.new do |s|
   s.version = CreateSendRails::VERSION
   s.authors = ['Andrew Scott', 'Rory MacDonald']
   s.description = %q{}
-  s.email = ['andrew@madetech.co.uk', 'rory@madetech.co.uk']
+  s.email = %w{andrew@madetech.co.uk rory@madetech.co.uk}
   s.homepage = 'https://github.com/madetech/createsend-rails'
   s.summary = %q{Campaign Monitor transactional email adapter for ActionMailer}
 
-  s.extra_rdoc_files = [
-    'LICENSE',
-    'README.md'
-  ]
-  s.rdoc_options = ['--charset=UTF-8']
+  s.extra_rdoc_files = %w{
+    LICENSE
+    README.md
+  }
+
+  s.rdoc_options = %w{--charset=UTF-8}
 
   s.add_dependency('actionmailer', '>= 3.0.0')
   s.add_dependency('createsend', '4.1.0')
   s.add_development_dependency('rake')
   s.add_development_dependency('simplecov', '~> 0.7.1')
 
-  s.files         = Dir['{lib,spec}/**/*.rb'] + ['LICENSE', 'README.md']
-  s.test_files    = ['spec']
-  s.require_paths = ['lib']
+  s.files         = Dir['{lib,spec}/**/*.rb'] + s.extra_rdoc_files
+  s.test_files    = %w{spec}
+  s.require_paths = %w{lib}
 end
