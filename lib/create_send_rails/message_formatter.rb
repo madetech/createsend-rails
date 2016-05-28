@@ -1,7 +1,7 @@
 module CreateSendRails
   class MessageFormatter
     def format
-      recipients.merge!({data: data}).compact!
+      recipients.merge!({data: values}).compact!
     end
 
     private
@@ -9,7 +9,7 @@ module CreateSendRails
       @message = message
     end
 
-    def data
+    def values
       JSON.parse(@message.try(:body).try(:raw_source))
     end
 
