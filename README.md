@@ -34,7 +34,12 @@ Now go into your `views/*_mailer/` and add a `.json` view, which defines the dat
 
 ![made](https://s3-eu-west-1.amazonaws.com/made-assets/googleapps/google-apps.png)
 
-Developed and maintained by [Made Tech Ltd](https://www.madetech.com/). 
+Developed and maintained by [Made Tech Ltd](https://www.madetech.com/). Key contributions:
+
+
+* [Andrew Scott](https://github.com/askl56)
+* [Rory MacDonald](https://github.com/rorymacdonald)
+
 
 ## License
 Copyright © 2016 [Made Tech Ltd](https://www.madetech.com/). It is free software, and may be redistributed under the terms specified in the MIT-LICENSE file.
