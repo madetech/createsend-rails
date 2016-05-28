@@ -1,41 +1,40 @@
-# createsend-rails
+# Campaign Monitor - Smart Transactional Emails for Rails
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/CreatesendRails/rails`. To experiment with that code, run `bin/console` for an interactive prompt.
+The `create_send_rails` Gem drops into ActionMailer and sends transactional emails via the [Campaign Monitor API](https://www.campaignmonitor.com/api/), using its [Smart Email](https://www.campaignmonitor.com/api/transactional/#send_a_smart_email) feature. 
 
-TODO: Delete this and the text above, and describe your gem
+It extends ActionMailer to default to JSON mailer views to define the format
 
-## Installation
+## Getting Started
 
-Add this line to your application's Gemfile:
+To get started, add the following line to your applications `Gemfile`:
 
 ```ruby
 gem 'createsend-rails'
 ```
+Then update your environment files and set `delivery_method` to `create_send` and include your CampaignMonitor `api_key` within the settings block.
 
-And then execute:
+```ruby
+config.action_mailer.delivery_method = :create_send
+config.action_mailer.create_send_settings = {
+    api_key: 'INSERT_API_KEY'
+}
+```
+Now go into your `views/*_mailer/` and add a `.json` view, which defines the data attributes required by your Smart Email template. Below is an example of a password reset email.  
 
-    $ bundle
+```json
+{
+    "smart_email_id": "SMART_EMAIL_ID",
+    "language": "<%= @user.language %>",
+    "name": "<%= @user.name %>",
+    "reset_url": "<%= @edit_password_reset_url %>"
+}
+```
 
-Or install it yourself as:
+## Credits
 
-    $ gem install createsend-rails
+![made](https://s3-eu-west-1.amazonaws.com/made-assets/googleapps/google-apps.png)
 
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/madetech/CreatesendRails-rails.
-
+Developed and maintained by [Made Tech Ltd](https://www.madetech.com/). 
 
 ## License
-
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
+Copyright © 2016 [Made Tech Ltd](https://www.madetech.com/). It is free software, and may be redistributed under the terms specified in the MIT-LICENSE file.
