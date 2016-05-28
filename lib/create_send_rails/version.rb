@@ -1,3 +1,3 @@
-module CreatesendRails
+module CreateSendRails
   VERSION = '0.1.0'
 end
