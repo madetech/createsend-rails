@@ -2,7 +2,7 @@
 
 The `create_send_rails` Gem drops into ActionMailer and sends transactional emails via the [Campaign Monitor API](https://www.campaignmonitor.com/api/), using its [Smart Email](https://www.campaignmonitor.com/api/transactional/#send_a_smart_email) feature. 
 
-It extends ActionMailer to default to JSON mailer views to define the format
+It updates ActionMailer so it defaults to JSON mailer views and allows you to define the data required for each of your mailers.
 
 ## Getting Started
 
