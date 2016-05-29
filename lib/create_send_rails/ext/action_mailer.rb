@@ -4,7 +4,11 @@ module CreateSendRails
       self.mail(headers, block)
     end
   end
+
   module ViewDefaults
 
   end
 end
+
+ActionMailer::Base.include(CreateSendRails::SmartEmailer)
+ActionMailer::Base.include(CreateSendRails::ViewDefaults)

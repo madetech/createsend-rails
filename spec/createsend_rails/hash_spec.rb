@@ -8,7 +8,7 @@ describe CreateSendRails::Hash do
       expect(simple_hash).to eq({ a: 1, d: 2 })
     end
 
-    it 'removes empty objects from multidimensional hash' do
+    it 'removes empty objects from multidimensional levels' do
       multi_hash.deep_reject! { |key, value| value.blank? }
       expect(multi_hash).to eq({ a: 5, d: 6, f: {a: 1} })
     end
