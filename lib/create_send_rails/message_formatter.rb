@@ -1,7 +1,7 @@
 module CreateSendRails
   class MessageFormatter
     def format
-      recipients.merge!({data: values}).compact!
+      merged_data.deep_reject! { |k, v| v.blank? }
     end
 
     private
@@ -9,6 +9,9 @@ module CreateSendRails
       @message = message
     end
 
+    def merged_data
+      recipients.merge!({data: values}).symbolize_keys!
+    end
     def values
       JSON.parse(@message.try(:body).try(:raw_source))
     end

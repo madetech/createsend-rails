@@ -8,7 +8,7 @@ module CreateSendRails
 
     def deliver!(message)
       auth = self.settings.dup
-      smart_data = EmailDataFormatter.new(message).format
+      smart_data = MessageFormatter.new(message).format
 
       tx_smart_email = ::CreateSend::Transactional::SmartEmail.new(auth, smart_email_id)
       tx_smart_email.send(smart_data)
