@@ -12,15 +12,16 @@ module CreateSendRails
     def merged_data
       recipients.merge!({data: values}).symbolize_keys!
     end
+
     def values
       JSON.parse(@message.try(:body).try(:raw_source))
     end
 
     def recipients
       {
-        'To' => "#{@message.to}",
-        'CC' => "#{@message.cc}",
-        'BCC' => "#{@message.bcc}"
+        to: "#{@message.to}",
+        cc: "#{@message.cc}",
+        bcc: "#{@message.to}"
       }
     end
 
