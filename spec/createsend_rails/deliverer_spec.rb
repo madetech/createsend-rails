@@ -3,7 +3,7 @@ describe CreateSendRails::Deliverer do
     context 'valid delivery attributes' do
       subject { described_class.new(request).deliver!(message) }
       let(:request) { double(api: 'abcdef') }
-      let(:message) { double() }
+      let(:message) { double }
 
       xit 'sends a request to the create_send API' do
         expect(subject).to eq(eukdlx)
@@ -16,14 +16,14 @@ describe CreateSendRails::Deliverer do
 
     context 'missing API credentials' do
       subject { described_class.new(request).deliver!(message) }
-      let(:request) { double() }
-      let(:message) { double() }
+      let(:request) { double }
+      let(:message) { double }
     end
 
     context 'missing API credentials' do
       subject { described_class.new(request).deliver!(message) }
-      let(:request) { double() }
-      let(:message) { double() }
+      let(:request) { double }
+      let(:message) { double }
     end
   end
 end

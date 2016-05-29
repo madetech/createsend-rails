@@ -3,11 +3,11 @@ module CreateSendRails
     attr_accessor :settings
 
     def initialize(values)
-      self.settings = {}.merge(values)
+      settings = {}.merge(values)
     end
 
     def deliver!(message)
-      auth = self.settings.dup
+      auth = settings.dup
       smart_data = MessageFormatter.new(message).format
 
       tx_smart_email = ::CreateSend::Transactional::SmartEmail.new(auth, smart_email_id)
@@ -16,9 +16,9 @@ module CreateSendRails
     end
 
     private
+
     def smart_email_id
       '2112cb2a-8fc7-42c1-a8b2-f7eecfa2d029'
     end
-
   end
 end
