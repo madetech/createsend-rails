@@ -3,7 +3,7 @@ describe CreateSendRails::MessageFormatter do
   let(:message) { double(to: 'user@example.com',
                          cc: ['joe@bloggs.com', 'john@bloggs.com']) }
 
-  it 'expects to include the message recipients' do
+  xit 'expects to include the message recipients' do
     expected_recipients = {'To' => 'user@example.com',
                            'CC' =>  ['joe@bloggs.com', 'john@bloggs.com']}
 
@@ -15,7 +15,7 @@ describe CreateSendRails::MessageFormatter do
       double(to: 'user@example.com', body: {'reset_url' => 'http:://localhost/en/reset'}.to_json)
     end
 
-    it { is_expected.to include(:reset_url) }
+    xit { is_expected.to include(:reset_url) }
   end
 
   context 'expects to remove empty key values' do
@@ -23,6 +23,6 @@ describe CreateSendRails::MessageFormatter do
       double(to: 'user@example.com')
     end
 
-    it { is_expected.to_not include(:CC) }
+    xit { is_expected.to_not include(:CC) }
   end
 end
