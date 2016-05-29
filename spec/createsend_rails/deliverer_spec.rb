@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe CreateSendRails::Deliverer do
   describe '#deliver!' do
     context 'valid delivery attributes' do

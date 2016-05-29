@@ -18,8 +18,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency('actionmailer', '>= 3.0.0')
   s.add_dependency('createsend', '4.1.0')
+  s.add_development_dependency('codeclimate-test-reporter')
   s.add_development_dependency('rake')
-  s.add_development_dependency('simplecov', '~> 0.7.1')
 
   s.files         = Dir['{lib,spec}/**/*.rb'] + ['LICENSE', 'README.md']
   s.test_files    = ['spec']
