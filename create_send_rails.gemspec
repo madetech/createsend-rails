@@ -24,11 +24,13 @@ Gem::Specification.new do |s|
   s.add_dependency 'actionmailer', '>= 3.0.0'
   s.add_dependency 'createsend', '4.1.0'
 
+  s.add_development_dependency 'byebug', '8.2.1'
+  s.add_development_dependency 'codeclimate-test-reporter'
   s.add_development_dependency 'mime-types', '~> 1.25.1'
+  s.add_development_dependency 'pry-byebug', '3.3.0'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec', '~> 2.14.0'
-  s.add_development_dependency 'simplecov', '~> 0.11.2'
-  s.add_development_dependency 'codeclimate-test-reporter'
   s.add_development_dependency 'rubocop', '0.37.2'
   s.add_development_dependency 'rubocop-rspec', '1.4.0'
+  s.add_development_dependency 'simplecov', '~> 0.11.2'
 end

@@ -1,7 +1,7 @@
 module CreateSendRails
-  class MessageFormatter
+  class SmartEmailFormatter
     def format
-      merged_data.deep_reject! { |_k, v| v.blank? }
+      request_body.deep_reject! { |_k, v| v.blank? }
     end
 
     private
@@ -10,15 +10,15 @@ module CreateSendRails
       @message = message
     end
 
-    def merged_data
+    def request_body
       recipients.merge!({ data: values })
     end
 
     def recipients
       {
-        to: @message.to.to_s,
-        cc: @message.cc.to_s,
-        bcc: @message.bcc.to_s
+        to: @message.to,
+        cc: @message.cc,
+        bcc: @message.bcc
       }.symbolize_keys!
     end
 

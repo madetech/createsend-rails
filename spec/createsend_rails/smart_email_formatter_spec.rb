@@ -1,25 +1,24 @@
-describe CreateSendRails::MessageFormatter do
+describe CreateSendRails::SmartEmailFormatter do
   subject { described_class.new(message).format }
   let(:template) { { reset_url: 'http:://localhost/en/reset' }.to_json }
   let(:message) {
     Mail::Message.new(to: 'user@example.com',
                       cc: ['joe@bloggs.com', 'john@bloggs.com'],
-                      body: template,
                       subject: 'subject')
   }
 
-  it 'expects to include the message recipients' do
-    expected_recipients = { to: 'user@example.com',
+  it 'include the message recipients' do
+    expected_recipients = { to: ['user@example.com'],
                            cc: ['joe@bloggs.com', 'john@bloggs.com'] }
 
     expect(subject).to eq(expected_recipients)
   end
 
-  context 'when the message includes data' do
+  context 'include message body' do
     it { expect(subject[:data]).to include(:reset_url) }
   end
 
-  context 'expects to remove empty key values' do
+  context 'remove empty key values' do
     let(:message) {
       Mail::Message.new(to: 'user@example.com',
                         body: template,
