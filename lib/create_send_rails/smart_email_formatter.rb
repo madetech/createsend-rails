@@ -23,6 +23,7 @@ module CreateSendRails
     end
 
     def values
+      return if @message.try(:body).empty?
       JSON.parse(@message.try(:body).try(:raw_source)).symbolize_keys!
     end
   end

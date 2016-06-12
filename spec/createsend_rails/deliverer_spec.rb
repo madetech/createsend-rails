@@ -1,5 +1,15 @@
 describe CreateSendRails::Deliverer do
-  describe '#deliver!' do
+  before(:all) do
+    ActionMailer::Base.create_send_settings = { api_key: 'ABCDEFG' }
+  end
+
+  describe 'action_mailer' do
+    it 'allows configuration settings' do
+      expect(ActionMailer::Base.create_send_settings[:api_key]).to eq('ABCDEFG')
+    end
+  end
+
+  describe 'delivery' do
     context 'valid delivery attributes' do
       subject { described_class.new(request).deliver!(message) }
       let(:request) { double(api: 'abcdef') }

@@ -1,4 +1,5 @@
-$:.push File.expand_path('../lib', __FILE__)
+# encoding: UTF-8
+$:.push File.expand_path('./lib', File.dirname(__FILE__))
 require 'create_send_rails/version'
 
 Gem::Specification.new do |s|
@@ -10,11 +11,7 @@ Gem::Specification.new do |s|
   s.homepage = 'https://github.com/madetech/createsend-rails'
   s.summary = 'Campaign Monitor transactional email adapter for ActionMailer'
 
-  s.extra_rdoc_files = %w{
-    LICENSE
-    README.md
-  }
-
+  s.extra_rdoc_files = %w{LICENSE README.md}
   s.rdoc_options = %w{--charset=UTF-8}
 
   s.files         = Dir['{lib,spec}/**/*.rb'] + s.extra_rdoc_files

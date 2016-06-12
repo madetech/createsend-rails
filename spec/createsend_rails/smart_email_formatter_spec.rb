@@ -3,18 +3,26 @@ describe CreateSendRails::SmartEmailFormatter do
   let(:template) { { reset_url: 'http:://localhost/en/reset' }.to_json }
   let(:message) {
     Mail::Message.new(to: 'user@example.com',
+                      body: '',
                       cc: ['joe@bloggs.com', 'john@bloggs.com'],
                       subject: 'subject')
   }
 
   it 'include the message recipients' do
     expected_recipients = { to: ['user@example.com'],
-                           cc: ['joe@bloggs.com', 'john@bloggs.com'] }
+                            cc: ['joe@bloggs.com', 'john@bloggs.com'] }
 
     expect(subject).to eq(expected_recipients)
   end
 
   context 'include message body' do
+    let(:message) {
+      Mail::Message.new(to: 'user@example.com',
+                        body: template,
+                        cc: ['joe@bloggs.com', 'john@bloggs.com'],
+                        subject: 'subject')
+    }
+
     it { expect(subject[:data]).to include(:reset_url) }
   end
 
