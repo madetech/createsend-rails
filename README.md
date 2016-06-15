@@ -1,13 +1,9 @@
 # Campaign Monitor - Smart Transactional Emails for Rails
 
-[![Code Climate](https://codeclimate.com/github/madetech/createsend-rails/badges/gpa.svg)](https://codeclimate.com/github/madetech/createsend-rails)
-
-[![Build Status](https://travis-ci.org/madetech/createsend-rails.svg?branch=master)](https://travis-ci.org/madetech/createsend-rails)
-
-[![Test Coverage](https://codeclimate.com/github/madetech/createsend-rails/badges/coverage.svg)](https://codeclimate.com/github/madetech/createsend-rails/coverage)
+[![Code Climate](https://codeclimate.com/github/madetech/createsend-rails/badges/gpa.svg)](https://codeclimate.com/github/madetech/createsend-rails) [![Build Status](https://travis-ci.org/madetech/createsend-rails.svg?branch=master)](https://travis-ci.org/madetech/createsend-rails) [![Test Coverage](https://codeclimate.com/github/madetech/createsend-rails/badges/coverage.svg)](https://codeclimate.com/github/madetech/createsend-rails/coverage)
 
 
-The `create_send_rails` Gem drops into ActionMailer and sends transactional emails via the [Campaign Monitor API](https://www.campaignmonitor.com/api/), using its [Smart Email](https://www.campaignmonitor.com/api/transactional/#send_a_smart_email) feature. 
+The `create_send_rails` Gem drops into ActionMailer and sends transactional emails via the [Campaign Monitor API](https://www.campaignmonitor.com/api/), using its [Smart Email](https://www.campaignmonitor.com/api/transactional/#send_a_smart_email) feature.
 
 It updates ActionMailer so it defaults to JSON mailer views and allows you to define the data required for each of your mailers.
 
@@ -26,7 +22,7 @@ config.action_mailer.create_send_settings = {
     api_key: 'INSERT_API_KEY'
 }
 ```
-Now go into your `views/*_mailer/` and add a `.json` view, which defines the data attributes required by your Smart Email template. Below is an example of a password reset email.  
+Now go into your `views/*_mailer/` and add a `.json` view, which defines the data attributes required by your Smart Email template. Below is an example of a password reset email.
 
 ```json
 {
