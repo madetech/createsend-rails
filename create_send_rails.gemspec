@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.require_paths = %w{lib}
 
   s.add_dependency 'actionmailer', '>= 3.0.0'
-  s.add_dependency 'createsend', '4.1.1'
+  s.add_dependency 'createsend', '~> 4.1.0'
 
   s.add_development_dependency 'byebug', '8.2.1'
   s.add_development_dependency 'codeclimate-test-reporter'
