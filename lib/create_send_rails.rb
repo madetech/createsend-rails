@@ -5,7 +5,7 @@ require 'create_send_rails/ext/hash'
 require 'create_send_rails/smart_email_formatter'
 
 module CreateSendRails
-  extend self
+  module_function :install
 
   def install
     ActionMailer::Base.include(CreateSendRails::SmartEmailer)

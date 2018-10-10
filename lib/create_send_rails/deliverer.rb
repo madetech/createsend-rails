@@ -16,7 +16,7 @@ module CreateSendRails
     private
 
     def auth
-      self.settings.dup
+      settings.dup
     end
 
     def mail_data
