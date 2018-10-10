@@ -8,12 +8,8 @@ module CreateSendRails
 
     def deliver!(mail)
       @mail = mail
-      puts 'BLEP'
       smart_email = ::CreateSend::Transactional::SmartEmail.new(auth, smart_email_id)
-      puts 'AUTH'
-      puts auth.to_s
       smart_email.send(mail_data)
-      puts mail_data.to_s
     end
 
     private
