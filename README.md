@@ -1,6 +1,6 @@
 # Campaign Monitor - Smart Transactional Emails for Rails
 
-[![Code Climate](https://codeclimate.com/github/madetech/createsend-rails/badges/gpa.svg)](https://codeclimate.com/github/madetech/createsend-rails) [![Build Status](https://travis-ci.org/madetech/createsend-rails.svg?branch=master)](https://travis-ci.org/madetech/createsend-rails) [![Test Coverage](https://codeclimate.com/github/madetech/createsend-rails/badges/coverage.svg)](https://codeclimate.com/github/madetech/createsend-rails/coverage)
+[![Build Status](https://travis-ci.org/madetech/createsend-rails.svg?branch=master)](https://travis-ci.org/madetech/createsend-rails)
 
 
 The `create_send_rails` Gem drops into ActionMailer and sends transactional emails via the [Campaign Monitor API](https://www.campaignmonitor.com/api/), using its [Smart Email](https://www.campaignmonitor.com/api/transactional/#send_a_smart_email) feature.
