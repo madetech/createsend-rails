@@ -1,4 +1,4 @@
-describe CreateSendRails::SmartEmailFormatter do
+describe CreatesendRails::SmartEmailFormatter do
   subject { described_class.new(message).format }
   let(:template) { { reset_url: 'http:://localhost/en/reset' }.to_json }
   let(:message) {

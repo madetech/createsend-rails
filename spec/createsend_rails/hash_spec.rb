@@ -1,4 +1,4 @@
-describe CreateSendRails::Hash do
+describe CreatesendRails::Hash do
   let(:simple_hash) { { a: 1, d: 2, e: nil } }
   let(:multi_hash) { { a: 5, d: 6, e: nil, f: { a: 1, b: '' } } }
 

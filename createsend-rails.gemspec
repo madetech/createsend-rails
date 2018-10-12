@@ -1,10 +1,10 @@
 # encoding: UTF-8
 $:.push File.expand_path('./lib', File.dirname(__FILE__))
-require 'create_send_rails/version'
+require 'createsend-rails/version'
 
 Gem::Specification.new do |s|
   s.name = 'createsend-rails'
-  s.version = CreateSendRails::VERSION
+  s.version = CreatesendRails::VERSION
   s.authors = ['Andrew Scott', 'Rory MacDonald']
   s.description = ''
   s.email = %w{andrew@madetech.co.uk rory@madetech.co.uk}

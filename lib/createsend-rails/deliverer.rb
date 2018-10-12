@@ -1,4 +1,4 @@
-module CreateSendRails
+module CreatesendRails
   class Deliverer
     attr_accessor :settings
 

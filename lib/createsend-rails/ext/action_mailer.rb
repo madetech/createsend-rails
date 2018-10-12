@@ -1,4 +1,4 @@
-module CreateSendRails
+module CreatesendRails
   module SmartEmailer
     def smart_mail(headers = {}, &block)
       mail(headers, block)

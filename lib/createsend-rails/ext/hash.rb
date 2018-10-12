@@ -1,4 +1,4 @@
-module CreateSendRails
+module CreatesendRails
   module Hash
     def deep_reject(&block)
       dup.deep_reject!(&block)
@@ -13,4 +13,4 @@ module CreateSendRails
   end
 end
 
-Hash.include(CreateSendRails::Hash)
+Hash.include(CreatesendRails::Hash)

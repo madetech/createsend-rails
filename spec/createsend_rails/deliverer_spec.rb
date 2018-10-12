@@ -1,4 +1,4 @@
-describe CreateSendRails::Deliverer do
+describe CreatesendRails::Deliverer do
   before(:all) do
     ActionMailer::Base.create_send_settings = { api_key: 'ABCDEFG' }
   end
