@@ -44,6 +44,7 @@ Developed and maintained by [Made Tech Ltd](https://www.madetech.com/). Key cont
 * [Andrew Scott](https://github.com/askl56)
 * [Rory MacDonald](https://github.com/rorymacdonald)
 * [Seb Ashton](https://github.com/SebAshton)
+* [Martin Vandersteen](https://github.com/MartinVandersteen)
 
 
 ## License
