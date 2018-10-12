@@ -19,7 +19,7 @@ module CreatesendRails
         to: @message.to,
         cc: @message.cc,
         bcc: @message.bcc,
-        ConsentToTrack: values[:consent_to_track] || 'Yes' # That's not clean, should find better way?
+        ConsentToTrack: values.try(:[], :consent_to_track) || 'Yes' # That's not clean, should find better way?
       }.symbolize_keys!
     end
 
