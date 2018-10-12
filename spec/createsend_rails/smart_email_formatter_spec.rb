@@ -12,7 +12,7 @@ describe CreatesendRails::SmartEmailFormatter do
     expected_recipients = { to: ['user@example.com'],
                             cc: ['joe@bloggs.com', 'john@bloggs.com'] }
 
-    expect(subject).to eq(expected_recipients)
+    expect(subject).to include(expected_recipients)
   end
 
   context 'include message body' do
