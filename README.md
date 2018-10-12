@@ -27,6 +27,7 @@ Now go into your `views/*_mailer/` and add a `.json` view, which defines the dat
 ```json
 {
     "smart_email_id": "SMART_EMAIL_ID",
+    "consent_to_track: "yes|no|unchanged",
     "language": "<%= @user.language %>",
     "name": "<%= @user.name %>",
     "reset_url": "<%= @edit_password_reset_url %>"
