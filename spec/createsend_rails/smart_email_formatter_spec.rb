@@ -13,6 +13,7 @@ describe CreatesendRails::SmartEmailFormatter do
                             cc: ['joe@bloggs.com', 'john@bloggs.com'] }
 
     expect(subject).to include(expected_recipients)
+    expect(subject).to include(ConsentToTrack: 'Yes')
   end
 
   context 'include message body' do
