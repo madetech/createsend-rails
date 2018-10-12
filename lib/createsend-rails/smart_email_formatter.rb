@@ -11,7 +11,7 @@ module CreatesendRails
     end
 
     def request_body
-      recipients.merge!({ data: values })
+      recipients.merge!(data: values, ConsentToTrack: 'Yes')
     end
 
     def recipients
