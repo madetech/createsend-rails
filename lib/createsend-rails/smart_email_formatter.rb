@@ -11,14 +11,15 @@ module CreatesendRails
     end
 
     def request_body
-      recipients.merge!(data: values, ConsentToTrack: 'Yes')
+      recipients.merge!(data: values)
     end
 
     def recipients
       {
         to: @message.to,
         cc: @message.cc,
-        bcc: @message.bcc
+        bcc: @message.bcc,
+        ConsentToTrack: @message.consent_to_track || 'Yes'
       }.symbolize_keys!
     end
 
