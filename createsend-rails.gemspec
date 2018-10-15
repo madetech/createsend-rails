@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors = ['Andrew Scott', 'Rory MacDonald']
   s.description = ''
   s.email = %w{andrew@madetech.co.uk rory@madetech.co.uk}
-  s.homepage = 'https://github.com/madetech/createsend-rails'
+  s.homepage = 'https://github.com/MartinVandersteen/createsend-rails'
   s.summary = 'Campaign Monitor transactional email adapter for ActionMailer'
 
   s.extra_rdoc_files = %w{LICENSE README.md}
