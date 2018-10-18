@@ -25,7 +25,7 @@ module CreatesendRails
 
     def values
       return if @message.try(:body).empty?
-      JSON.parse(ERB.new(@message.try(:body).try(:raw_source)).result).symbolize_keys!
+      JSON.parse(@message.try(:body).try(:encoded)).symbolize_keys!
     end
   end
 end
