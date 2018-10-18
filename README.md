@@ -22,7 +22,7 @@ config.action_mailer.create_send_settings = {
     api_key: 'INSERT_API_KEY'
 }
 ```
-Now go into your `views/*_mailer/` and add a `.json` view, which defines the data attributes required by your Smart Email template. Below is an example of a password reset email.
+Now go into your `views/*_mailer/` and add a `.json.erb` view, which defines the data attributes required by your Smart Email template. Below is an example of a password reset email. (Don't forget to declare the appropriate instance variables in your mailer)
 
 ```json
 {
