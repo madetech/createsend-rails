@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.email = %w{andrew@madetech.co.uk rory@madetech.co.uk}
   s.homepage = 'https://github.com/MartinVandersteen/createsend-rails'
   s.summary = 'Campaign Monitor transactional email adapter for ActionMailer'
+  s.licenses = ['MIT']
 
   s.extra_rdoc_files = %w{LICENSE README.md}
   s.rdoc_options = %w{--charset=UTF-8}
