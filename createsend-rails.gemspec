@@ -5,9 +5,9 @@ require 'createsend-rails/version'
 Gem::Specification.new do |s|
   s.name = 'createsend-rails'
   s.version = CreatesendRails::VERSION
-  s.authors = ['Andrew Scott', 'Rory MacDonald']
+  s.authors = ['Andrew Scott', 'Rory MacDonald', 'Martin Vandersteen']
   s.description = ''
-  s.email = %w{andrew@madetech.co.uk rory@madetech.co.uk}
+  s.email = %w{martin@koalect.com andrew@madetech.co.uk rory@madetech.co.uk}
   s.homepage = 'https://github.com/MartinVandersteen/createsend-rails'
   s.summary = 'Campaign Monitor transactional email adapter for ActionMailer'
   s.licenses = ['MIT']
