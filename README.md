@@ -68,7 +68,7 @@ Initialy developed by [Made Tech Ltd](https://www.madetech.com/). Key contributi
 * [Andrew Scott](https://github.com/askl56)
 * [Rory MacDonald](https://github.com/rorymacdonald)
 * [Seb Ashton](https://github.com/SebAshton)
-* [Martin Vandersteen](https://github.com/MartinVandersteen) from [Koalect](https://www.koalect.com/)
+* [Martin Vandersteen](https://github.com/MartinVandersteen) from [Feeka.studio](https://www.feeka.studio/)
 
 
 ## License
