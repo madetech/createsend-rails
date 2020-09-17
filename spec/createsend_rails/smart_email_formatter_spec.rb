@@ -1,4 +1,4 @@
-describe CreateSendRails::SmartEmailFormatter do
+describe CreatesendRails::SmartEmailFormatter do
   subject { described_class.new(message).format }
   let(:template) { { reset_url: 'http:://localhost/en/reset' }.to_json }
   let(:message) {
@@ -12,7 +12,8 @@ describe CreateSendRails::SmartEmailFormatter do
     expected_recipients = { to: ['user@example.com'],
                             cc: ['joe@bloggs.com', 'john@bloggs.com'] }
 
-    expect(subject).to eq(expected_recipients)
+    expect(subject).to include(expected_recipients)
+    expect(subject).to include(ConsentToTrack: 'Yes')
   end
 
   context 'include message body' do

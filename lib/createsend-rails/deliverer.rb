@@ -1,4 +1,4 @@
-module CreateSendRails
+module CreatesendRails
   class Deliverer
     attr_accessor :settings
 
@@ -8,7 +8,6 @@ module CreateSendRails
 
     def deliver!(mail)
       @mail = mail
-
       smart_email = ::CreateSend::Transactional::SmartEmail.new(auth, smart_email_id)
       smart_email.send(mail_data)
     end
@@ -16,7 +15,7 @@ module CreateSendRails
     private
 
     def auth
-      self.settings.dup
+      settings.dup
     end
 
     def mail_data
